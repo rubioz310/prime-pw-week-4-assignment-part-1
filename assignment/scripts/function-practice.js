@@ -18,7 +18,7 @@ function helloName( name ) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log(helloName('Jose'))
+console.log(helloName('Jose'));
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -28,10 +28,11 @@ function addNumbers( firstNumber, secondNumber ) {
 console.log(addNumbers(23, 67));
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree( ){
-
+function multiplyThree( firstNumber, secondNumber, thirdNumber ){
+  let result=firstNumber*secondNumber*thirdNumber;
+  return `The result is ${result}`;
 }
-
+console.log (multiplyThree(3,6,9));
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
