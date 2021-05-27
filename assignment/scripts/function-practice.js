@@ -61,9 +61,17 @@ console.log(getLast(newArray));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
-
+  for(let element of array){
+    if (element==value) {
+      return true;
+    }
+  }
+  return false;
 }
 
+let numberArray=[4,56,12,39]
+console.log(find(12, numberArray));
+console.log(find(3, numberArray));
 // ----------------------
 // Stretch Goals
 // ----------------------
