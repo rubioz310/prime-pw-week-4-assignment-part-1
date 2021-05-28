@@ -90,21 +90,31 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll( array ) {
-  let sum = 0
+  let sum = 0;
   // TODO: loop to add items
   for (let num of array){
     sum+=num;
   }
   return sum;
 }
-let sumArray = [1, 1, 2, 3, 5, 8, 13, 21, 34]
-console.log('The sum of the array is:', sumAll(sumArray));
+let sumArray = [1, 1, 2, 3, 5, 8, 13, 21, 34];
+console.log(`The sum of the array is: ${sumAll(sumArray)}`);
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
+function positiveNumbers(array){
+  let positiveArray = [];
+  for (let num of array){
+    if (num > 0){
+      positiveArray.push(num);
+    }
+  }
+  return positiveArray;
+}
 
-
+let testArray = [3, -1, 46, -189, 0, 27];
+console.log(`List of positive numbers: ${positiveNumbers(testArray)}`);
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
