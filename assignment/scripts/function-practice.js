@@ -119,3 +119,25 @@ console.log(`List of positive numbers: ${positiveNumbers(testArray)}`);
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+
+// Create a function that takes an array arr of numbers and
+// moves all zeros to the end, preserving the order of the other elements.
+function moveZeros( array ){
+  let correctArray = [];
+  let zerosCount = 0;
+  for (let element of array){
+    if( element === 0){
+      zerosCount++;
+    } else {
+      correctArray.push(element);
+    }
+  }
+  for (let i = 0; i < zerosCount; i++){
+    correctArray.push(0);
+  }
+  return correctArray;
+}
+
+console.log(moveZeros([1, 0, 1, 2, 0, 1, 3]));
+console.log(moveZeros([0, 1, null, 2, false, 1, 0]));
+console.log(moveZeros(['a', 0, 0, 'b', 'c', 'd', 0, 1, 0, 1, 0, 3, 0, 1, 9, 0, 0, 0, 0, 9]));
